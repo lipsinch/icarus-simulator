@@ -9,8 +9,12 @@ export interface Talent {
   icon?: string;          // Path to the image
   
   // LOGIC REQUIREMENTS
-  requiredPointsInTree: number; // Many Icarus talents need 10 or 20 points in the tree first
+  requiredPointsInTree?: number; // Many Icarus talents need 10 or 20 points in the tree first
   prerequisites: string[];      // IDs of specific talents you must have first
+  position: {
+    row: number;
+    col: number;
+  }
 }
 
 export interface TalentState {
